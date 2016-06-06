@@ -141,6 +141,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         timeout: '300',
         loglevel: 'notice'
       },
+      elkstack_kibana_password: 'kibana',
     }
   end
 
