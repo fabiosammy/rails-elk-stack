@@ -1,0 +1,15 @@
+#!/bin/bash
+
+DIR=$(pwd)
+[ $(basename $DIR) == 'bin' ] && echo "Don't run in bin" && exit -1  
+
+IMAGE="docker_elkstack"
+[ "$(docker images | grep "$IMAGE")" == "" ] && docker build -t $IMAGE .
+PARAMS="--rm -it --user=1000:1000 -v $DIR:/app"
+
+if [ "$1" == "" ] ; then
+  docker run $PARAMS --name $IMAGE -p 3000:3000 $IMAGE
+else
+  docker run $PARAMS $IMAGE $1
+fi
+
