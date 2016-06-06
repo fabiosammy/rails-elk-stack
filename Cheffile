@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+#^syntax detection
+
+site 'https://supermarket.getchef.com/api/v1'
+
+# cookbook 'chef-client'
+
+cookbook 'apt', '~> 2.7.0'
+cookbook 'build-essential', '~> 2.2.3'
+cookbook 'rvm', '~> 0.9.4'
+cookbook 'postgresql', '~> 3.4.20'
+cookbook 'git', '~> 4.2.2'
+cookbook 'vim', '~> 1.1.2'
+cookbook 'redisio', '~> 2.3.0'
+cookbook 'java', '~> 1.35.0'
+cookbook 'elkstack', '~> 6.0.4'
+
